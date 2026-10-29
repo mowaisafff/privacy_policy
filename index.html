@@ -61,6 +61,19 @@
             color: #718096;
             margin-bottom: 24px;
         }
+        .summary {
+            background-color: #f0fff4;
+            border-left: 4px solid #38a169;
+            padding: 16px 18px;
+            border-radius: 4px;
+            margin-bottom: 8px;
+        }
+        .summary p {
+            margin: 0 0 8px;
+        }
+        .summary ul {
+            margin: 0;
+        }
         .contact-box {
             background-color: #ebf8ff;
             border-left: 4px solid #3182ce;
@@ -73,53 +86,143 @@
 <body>
     <div class="container">
         <h1>Privacy Policy for DentCase</h1>
-        <p class="last-updated">Last updated: September 10, 2026</p>
+        <p class="last-updated">Last updated: October 29, 2026</p>
 
-        <p>Thank you for using <strong>DentCase</strong>. Your privacy is important to us. This Privacy Policy explains how information is handled when you use our application.</p>
+        <p>DentCase is an offline-first dental case management app. This Privacy Policy explains what information the app handles, where it is stored, and the choices available to you. Patient records are designed to stay on your device, and an account is not required for normal use. Some optional features use Google services and a cloud database, as described below.</p>
 
-        <h2>1. Patient Clinical Records</h2>
-        <p>DentCase is designed as a patient case management application. All clinical patient data — including patient names, contact numbers, age, gender, department notes, photographs, radiographs, billing records, and appointment schedules — is <strong>stored locally on your device</strong>. We do not upload or host your patient clinical records on external servers.</p>
+        <div class="summary">
+            <p><strong>Quick summary</strong></p>
+            <ul>
+                <li>Patient records are stored on your device and are not sent to DentCase-operated servers.</li>
+                <li>Google Sign-In is optional. It enables Google Drive backup and the optional registration step.</li>
+                <li>Limited service, analytics, and advertising data is processed as described below.</li>
+                <li>We do not sell patient records or use them for advertising or analytics.</li>
+            </ul>
+        </div>
 
-        <h2>2. Account Setup & Service Diagnostics</h2>
-        <p>To provide smooth app functionality, maintain security, and optimize default regional settings (such as currency detection), the application may process basic diagnostic information upon setup and launch:</p>
+        <h2>1. Patient and Clinical Records</h2>
+        <p>Patient names, contact details, age, gender, department and clinical notes, photographs, radiographs, appointments, and billing details are stored locally in DentCase’s private app storage on your device. We do not upload or host these records on DentCase-operated servers, and they are not included in service records, analytics events, or advertising requests.</p>
+
+        <p>Through DentCase, patient records leave your device only when you choose to:</p>
         <ul>
-            <li><strong>User Contact Details</strong>: Name and email address if voluntarily provided during setup.</li>
-            <li><strong>Network & Technical Identifiers</strong>: Basic network details (IP address) and device attributes (operating system version, device model, and app version) for security diagnostics and regional configuration.</li>
+            <li>share or export a case summary, image, PDF, or backup file using your device’s share or save features;</li>
+            <li>create a backup file and store it wherever you choose; or</li>
+            <li>use the optional Google Drive backup, which uploads a full backup to your own Google Drive.</li>
         </ul>
 
-        <h2>3. Third-Party Services</h2>
-        <p>Our app integrates trusted third-party services for advertising and usage analytics:</p>
+        <p>DentCase does not separately encrypt the local database, image files, or app preferences. They rely on your device’s app sandbox, lock screen, and operating-system protections. Portable backup files you export are also not encrypted by DentCase, so store them securely. Your device’s operating system may separately back up app data—including local records—if you have system backup enabled; those backups are controlled by your device settings, not by DentCase.</p>
 
-        <h3>Google Analytics for Firebase</h3>
-        <p>We use Firebase Analytics to measure aggregate screen usage and feature adoption. This service collects <strong>anonymized metrics</strong> such as:</p>
+        <p>You are responsible for obtaining any required patient consent and for complying with the healthcare privacy laws that apply to you. DentCase is a documentation tool, not a healthcare provider, and is not a substitute for your official records system.</p>
+
+        <h2>2. Optional Google Account and Service Records</h2>
+        <p>You can use DentCase without an account. Google Sign-In is optional and is used for the registration step and Google Drive backup.</p>
+
+        <p>If you sign in with Google, Firebase Authentication and Google Sign-In process your Google account identifier and basic profile information (name, email address, and profile photo URL) to authenticate you. DentCase stores this profile locally. Signing out removes it from the device, but does not delete local cases or Google Drive backups.</p>
+
+        <p>To operate, secure, and improve the app, DentCase also sends a limited service record to a cloud database hosted by Supabase. A record is sent when the app first starts with internet access, when your public IP address changes, and when you complete registration. This happens whether or not you sign in. The record may include:</p>
         <ul>
-            <li>App opens and screen views</li>
-            <li>Device hardware model and operating system version</li>
-            <li>General country-level location</li>
-        </ul>
-        <p>This data is not linked to patient identities and helps us improve app performance. Learn more on the <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy & Terms page</a>.</p>
-
-        <h3>AdMob (Google Mobile Ads)</h3>
-        <p>We display advertisements through Google AdMob to support the app. AdMob may use device advertising identifiers to serve relevant ads. Where required by law (such as in the EEA and UK), user consent preferences are requested. AdMob does not access patient records. For details, see <a href="https://policies.google.com/technologies/ads" target="_blank" rel="noopener">Google's Advertising Privacy Policy</a>.</p>
-
-        <h2>4. Permissions We Request</h2>
-        <p>The app may request access to the following device capabilities when initiated by you:</p>
-        <ul>
-            <li><strong>Camera</strong>: To capture photographs and radiographs for your dental cases.</li>
-            <li><strong>Storage / Media Access</strong>: To attach existing images from your library or export backup files and PDF reports.</li>
+            <li>a stable per-installation identifier generated by the app;</li>
+            <li>your public IP address and, where available, local network IP addresses;</li>
+            <li>device model and name, operating system, and app version; and</li>
+            <li>if you provided them during registration or Google sign-in, your name and email address.</li>
         </ul>
 
-        <h2>5. Data Security & Control</h2>
-        <p>Your clinical case records remain stored under your control on your device. We recommend securing your device with biometric authentication or a passcode. You can export backups or delete case entries at any time directly inside the app.</p>
+        <p>Service records do not include patient data, case notes, images, or billing amounts. We use them for service operation, diagnostics, security, regional defaults (such as currency), and reliability. They are not used for advertising or patient profiling. To suggest a default currency, the app may also send your IP address to a country-lookup service; this is skipped when you are offline or the country cannot be determined.</p>
 
-        <h2>6. Children's Privacy</h2>
-        <p>DentCase is a professional tool for dental practitioners and students and is not intended for use by children under the age of 13.</p>
+        <p>We retain service records only for as long as needed for these purposes, unless a longer period is required by law. You can ask us to delete records associated with your installation by contacting us.</p>
 
-        <h2>7. Changes to This Privacy Policy</h2>
-        <p>We may update this policy periodically. Any changes will be published on this page with a revised "Last updated" date.</p>
+        <h2>3. Optional Google Drive Backup</h2>
+        <p>If you sign in with Google and choose <strong>Back Up to Google Drive</strong>, DentCase uploads a full backup containing your local database and images to the private, app-specific <code>appDataFolder</code> in your Google Drive. The backup is stored in your Google account, not on DentCase-operated servers. Restoring a backup replaces the local cases and images with the selected version.</p>
 
-        <h2>8. Contact Us</h2>
-        <p>If you have any questions or inquiries regarding this Privacy Policy, please contact us at: mowais.addd@gmail.com</p>
+        <p>The app keeps a limited number of recent backup versions and automatically removes older ones. Backups are not separately encrypted by DentCase; their security depends on your Google account and device. You can revoke DentCase’s Google access or delete its hidden app data through your Google Account. Deleting the app does not delete Drive backups.</p>
+
+        <h2>4. Analytics and Google Analytics Data</h2>
+        <p>On Android, DentCase uses <strong>Google Analytics for Firebase</strong> (Firebase Analytics / GA4) to understand aggregate app usage, diagnose problems, and improve features. This analytics data is collected whether or not you sign in.</p>
+
+        <p>Firebase and Google Analytics may automatically collect and process:</p>
+        <ul>
+            <li>a pseudonymous app-instance identifier, which Firebase uses as the Google Analytics <strong>User ID</strong> for your installation;</li>
+            <li>device and advertising identifiers, device model and manufacturer, operating-system version, app version, language, and locale;</li>
+            <li>IP address and approximate location derived from it;</li>
+            <li>app opens, sessions, screen views, in-app events, feature usage, and general interaction or diagnostic data.</li>
+        </ul>
+
+        <p>We also set non-identifying user properties such as app settings, enabled features, app language, sign-in or registration status, and a broad case-count range.</p>
+
+        <p>We do not set your name, email address, Google account identifier, patient name, mobile number, case ID, notes, images, or exact billing amounts as a Google Analytics User ID or event parameter. Analytics data is not linked to your patient records.</p>
+
+        <p>Google processes this data under its own privacy policy and may process it outside your country. Analytics is disabled on desktop builds.</p>
+
+        <h2>5. Advertising</h2>
+        <p>DentCase displays ads through <strong>Google AdMob</strong> on Android. AdMob may collect and use your advertising identifier, IP address, approximate location, device and app information, and ad interaction data to serve, measure, and limit ads. Depending on your region and device settings, ads may be personalized or non-personalized.</p>
+
+        <p>DentCase does not provide AdMob with patient records, names, email addresses, case data, or billing amounts. You can reset or delete your advertising ID and control ad personalization in your device’s advertising settings or in Google’s Ad Settings. Google’s advertising privacy policy explains how Google handles this data.</p>
+
+        <h2>6. Permissions We Request</h2>
+        <p>DentCase requests access only when needed for features you choose:</p>
+        <ul>
+            <li><strong>Camera:</strong> to capture photographs and radiographs for a case.</li>
+            <li><strong>Photos, media, or storage:</strong> to attach existing images and to save or export images, PDFs, and backup files.</li>
+            <li><strong>Internet and network access:</strong> for optional sign-in, Drive backup, service records, analytics, ads, and IP-based currency lookup.</li>
+            <li><strong>Advertising ID:</strong> used by Google’s advertising and analytics SDKs on Android; you can control it in your device settings.</li>
+        </ul>
+        <p>DentCase does not request access to your contacts, microphone, SMS messages, or precise GPS location.</p>
+
+        <h2>7. How Information Is Shared</h2>
+        <p>We do not sell patient records, and we do not rent or sell your name, email address, or registration details. We share limited information only in these circumstances:</p>
+        <ul>
+            <li><strong>Service providers:</strong> Google (Firebase Analytics, Firebase Authentication and Google Sign-In, AdMob, and Google Drive) and Supabase (cloud database hosting) process data on our behalf or as independent providers under their own terms.</li>
+            <li><strong>Network lookups:</strong> public-IP and country-lookup providers process your IP address to determine your connection address and suggest a default currency. These lookups are skipped when offline.</li>
+            <li><strong>Your direction:</strong> when you share or export a case, image, PDF, or backup, the information goes to the app or service you choose.</li>
+            <li><strong>Legal and safety:</strong> when required by law or legal process, or to protect the rights, safety, and security of users or the app.</li>
+            <li><strong>Business transfer:</strong> in connection with a merger, acquisition, or transfer of the app, subject to this policy.</li>
+        </ul>
+        <p>Patient records are never included in service records, analytics events, or ad requests.</p>
+
+        <h2>8. Security and Retention</h2>
+        <p>Network connections use HTTPS. Local records are kept in the app’s private storage, cloud service records are stored in a restricted database that the app can only add to, and Drive backups are protected by your Google account. No method of storage or transmission is completely secure.</p>
+
+        <p>Retention:</p>
+        <ul>
+            <li><strong>Local cases and images:</strong> until you delete them or uninstall the app.</li>
+            <li><strong>Queued service records:</strong> until they are sent or cleared.</li>
+            <li><strong>Cloud service records:</strong> for as long as needed for the purposes described above, then deleted or anonymized, unless a longer period is required by law.</li>
+            <li><strong>Analytics data:</strong> according to our Firebase and Google Analytics retention settings and Google’s policies.</li>
+            <li><strong>Google Drive backups:</strong> until you delete them or revoke access; the app automatically removes older versions beyond its retention limit.</li>
+        </ul>
+
+        <p>Uninstalling DentCase removes local app data from the device, but does not delete Google Drive backups or cloud service records. Signing out does not delete local cases or Drive backups.</p>
+
+        <h2>9. Your Choices and Rights</h2>
+        <ul>
+            <li><strong>Use without an account.</strong> You can skip Google sign-in and continue using local case management.</li>
+            <li><strong>Manage your Google connection.</strong> Sign out in the app and revoke DentCase’s access from your Google Account at any time.</li>
+            <li><strong>Delete local data.</strong> Delete cases in the app or uninstall DentCase to remove local app data from the device. This does not remove Drive backups or cloud service records.</li>
+            <li><strong>Control ads.</strong> Reset or delete your advertising ID and adjust ad personalization in your device’s advertising settings or Google’s Ad Settings.</li>
+            <li><strong>Request cloud data help.</strong> Email us to request access, correction, or deletion of service records associated with your installation. Because some identifiers are pseudonymous, we may not be able to locate your records; we will explain if that is the case.</li>
+            <li><strong>Additional rights.</strong> Depending on where you live, you may have rights to access, correct, delete, restrict, or object to processing, or to withdraw consent. You may also complain to your local data protection authority. These rights are subject to legal exceptions.</li>
+        </ul>
+
+        <p>We do not sell personal information for money. If you are a California resident, you may exercise applicable access or deletion rights using the contact details below.</p>
+
+        <p>If you are a patient and want to access, correct, or delete a clinical record created in DentCase, please contact the dental professional or organization that created it. We do not have access to records stored on their device.</p>
+
+        <h2>10. Children’s Privacy</h2>
+        <p>DentCase is intended for dental professionals and students and is not directed to children under 13 (or the minimum age required in your jurisdiction). We do not knowingly collect personal information from children. If you believe a child has used the app or provided information to us, please contact us so we can delete the relevant service records.</p>
+
+        <h2>11. International Processing</h2>
+        <p>Google and Supabase may store or process information in the United States and other countries. Privacy laws in those countries may differ from those where you live. Where required, transfers are made using legally recognized safeguards.</p>
+
+        <h2>12. Changes to This Policy</h2>
+        <p>We may update this policy as the app or legal requirements change. The revised policy will be posted here with a new “Last updated” date. If changes are material, we will provide additional notice as required by law. Continued use of DentCase after an update means you acknowledge the revised policy.</p>
+
+        <h2>13. Contact Us</h2>
+        <p>For privacy questions or requests, contact:</p>
+        <div class="contact-box">
+            <strong>M Awais (DigiDentAI)</strong><br>
+            Email: <a href="mailto:mowais.addd@gmail.com">mowais.addd@gmail.com</a>
+        </div>
+        <p>For purposes of applicable data protection laws, this is the controller of the service records described above. Patient records are controlled by you on your device.</p>
     </div>
 </body>
 </html>
